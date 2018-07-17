@@ -1,7 +1,7 @@
 // @flow
 import * as d3 from 'd3'
 
-export type TrackId = 'MOBILE' | ‘CLOUD’ | 'FOUNDATIONS' | 'SERVER' |
+export type TrackId = 'MOBILE' | 'CLOUD' | 'FOUNDATIONS' | 'SERVER' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
@@ -9,7 +9,7 @@ export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
   'MOBILE': Milestone,
-  ‘CLOUD’: Milestone,
+  'CLOUD': Milestone,
   'FOUNDATIONS': Milestone,
   'SERVER': Milestone,
   'PROJECT_MANAGEMENT': Milestone,
@@ -72,7 +72,7 @@ export type Track = {
 
 type Tracks = {|
   'MOBILE': Track,
-  ‘CLOUD’: Track,
+  'CLOUD': Track,
   'FOUNDATIONS': Track,
   'SERVER': Track,
   'PROJECT_MANAGEMENT': Track,
@@ -157,8 +157,8 @@ export const tracks: Tracks = {
     }],
   },
 
-  “CLOUD”: {
-    "displayName": “Cloud”,
+  "CLOUD": {
+    "displayName": "Cloud",
     "category": "A",
     "description": "Develops expertise in cloud product technologies, such as Go, Java, and JavaScript",
     "milestones": [{
@@ -1193,19 +1193,19 @@ export const categoryColorScale = d3.scaleOrdinal()
   .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
 
 export const titles = [
-  {label: ’SE2’, minPoints: 0, maxPoints: 16},
-  {label: ‘SE3’, minPoints: 17, maxPoints: 35},
+  {label: 'SE2', minPoints: 0, maxPoints: 16},
+  {label: 'SE3', minPoints: 17, maxPoints: 35},
   {label: 'Senior Engineer', minPoints: 36, maxPoints: 57},
-  {label: ‘Senior’, minPoints: 36, maxPoints: 57},
-  {label: 'Senior Staff’, minPoints: 58, maxPoints: 89},
- {label: ‘Team Lead’, minPoints: 58, maxPoints: 89},
-{label: ‘Manager’, minPoints: 58, maxPoints: 92},
-  {label: ‘Distinguished Engineer’, minPoints: 58, maxPoints: 89},
-  {label: ‘Director’, minPoints: 80, maxPoints: 90},
+  {label: 'Senior', minPoints: 36, maxPoints: 57},
+  {label: 'Senior Staff', minPoints: 58, maxPoints: 89},
+  {label: 'Team Lead', minPoints: 58, maxPoints: 89},
+  {label: 'Manager', minPoints: 58, maxPoints: 92},
+  {label: 'Distinguished Engineer', minPoints: 58, maxPoints: 89},
+  {label: 'Director', minPoints: 80, maxPoints: 90},
   {label: 'Principal Engineer', minPoints: 90},
-  {label: 'Director of Engineering', minPoints: 90}
-  {label: ‘Vice President’, minPoints: 90}
-  {label: ‘Senior Vice President’, minPoints: 90}
+  {label: 'Director of Engineering', minPoints: 90},
+  {label: 'Vice President', minPoints: 90},
+  {label: 'Senior Vice President', minPoints: 90}
 ]
 
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
