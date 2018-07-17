@@ -1328,7 +1328,7 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
-  .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
+  .range(['#93C572', '#77DD78', '#03C03C', '#138808'])
 
 export const titles = [
   {label: 'SE2', minPoints: 0, maxPoints: 16},
