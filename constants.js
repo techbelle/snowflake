@@ -1,20 +1,20 @@
 // @flow
 import * as d3 from 'd3'
 
-export type TrackId = 'MOBILE' | 'CLOUD' | 'FOUNDATIONS' | 'SERVER' |
-  'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
+export type TrackId = 'PRODUCT' | 'TOOLS' | 'FOUNDATIONS' | 'DATABASE' |
+  'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'DIAGNOSTICS' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
-  'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
+  'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'| 'REVIEWS'| 'ESTIMATION'|
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
-  'MOBILE': Milestone,
-  'CLOUD': Milestone,
+  'PRODUCT': Milestone,
+  'TOOLS': Milestone,
   'FOUNDATIONS': Milestone,
-  'SERVER': Milestone,
+  'DATABASE': Milestone,
   'PROJECT_MANAGEMENT': Milestone,
   'COMMUNICATION': Milestone,
-  'CRAFT': Milestone,
+  'DIAGNOSTICS': Milestone,
   'INITIATIVE': Milestone,
   'CAREER_DEVELOPMENT': Milestone,
   'ORG_DESIGN': Milestone,
@@ -23,7 +23,9 @@ export type MilestoneMap = {
   'MENTORSHIP': Milestone,
   'EVANGELISM': Milestone,
   'RECRUITING': Milestone,
-  'COMMUNITY': Milestone
+  'COMMUNITY': Milestone,
+  'REVIEWS': Milestone,
+  'ESTIMATION': Milestone,
 }
 export const milestones = [0, 1, 2, 3, 4, 5]
 
@@ -71,13 +73,13 @@ export type Track = {
 }
 
 type Tracks = {|
-  'MOBILE': Track,
-  'CLOUD': Track,
+  'PRODUCT': Track,
+  'TOOLS': Track,
   'FOUNDATIONS': Track,
-  'SERVER': Track,
+  'DATABASE': Track,
   'PROJECT_MANAGEMENT': Track,
   'COMMUNICATION': Track,
-  'CRAFT': Track,
+  'DIAGNOSTICS': Track,
   'INITIATIVE': Track,
   'CAREER_DEVELOPMENT': Track,
   'ORG_DESIGN': Track,
@@ -86,19 +88,21 @@ type Tracks = {|
   'MENTORSHIP': Track,
   'EVANGELISM': Track,
   'RECRUITING': Track,
-  'COMMUNITY': Track
+  'COMMUNITY': Track,
+  'REVIEWS': Track,
+  'ESTIMATION':Track,
 |}
 
 export const tracks: Tracks = {
-  "MOBILE": {
-    "displayName": "Mobile",
+  "PRODUCT": {
+    "displayName": "PRODUCT",
     "category": "A",
-    "description": "Develops expertise in native mobile platform engineering, such as iOS or Android",
+    "description": "Develops expertise in native PRODUCT platform engineering, such as iOS or Android",
     "milestones": [{
       "summary": "Works effectively within established iOS or Android architectures, following current best practices",
       "signals": [
         "Delivers features requiring simple local modifications",
-        "Adds simple actions that call server endpoints",
+        "Adds simple actions that call DATABASE endpoints",
         "Reuses existing components appropriately",
       ],
       "examples": [
@@ -119,7 +123,7 @@ export const tracks: Tracks = {
         "Prototyped a simple new feature quickly",
       ],
     }, {
-      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "summary": "Designs major new features and demonstrates a nuanced understanding of PRODUCT platform constraints",
       "signals": [
         "Implements complex features with a large product surface area",
         "Works effectively with  Android reactive programming framework",
@@ -143,7 +147,7 @@ export const tracks: Tracks = {
         "Migrated Android persistance layer to reactive programming",
       ],
     }, {
-      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+      "summary": "Is an industry-leading expert in PRODUCT engineering or sets strategic PRODUCT direction for an eng team",
       "signals": [
         "Defines long-term goals and ensures active projects are in service of them",
         "Designs and builds innovative, industry-leading UI interactions",
@@ -157,10 +161,10 @@ export const tracks: Tracks = {
     }],
   },
 
-  "CLOUD": {
-    "displayName": "Cloud",
+  "TOOLS": {
+    "displayName": "TOOLS",
     "category": "A",
-    "description": "Develops expertise in cloud product technologies, such as Go, Java, and JavaScript",
+    "description": "Develops expertise in TOOLS product technologies, such as Go, Java, and JavaScript",
     "milestones": [{
       "summary": "Works effectively within established web client architectures, following current best practices",
       "signals": [
@@ -291,16 +295,16 @@ export const tracks: Tracks = {
     }],
   },
 
-  "SERVER": {
-    "displayName": "Server",
+  "DATABASE": {
+    "displayName": "DATABASE",
     "category": "A",
-    "description": "Develops expertise in server side engineering",
+    "description": "Develops expertise in DATABASE side engineering",
     "milestones": [{
-      "summary": "Works effectively within established server side framework, following current best practices",
+      "summary": "Works effectively within established DATABASE side framework, following current best practices",
       "signals": [
         "Has engineering and programming foundational knowledge sufficient to understand and implement well scoped out features; Is learning about development best practices",
         "Has a basic understanding of what all components in their product are.",
-        "Makes minor server changes to support client needs",
+        "Makes minor DATABASE changes to support client needs",
       ],
       "examples": [
         "Added IFTTT trigger for new bookmark to medium2",
@@ -329,7 +333,7 @@ export const tracks: Tracks = {
       "examples": [
         "Implemented Google Auth login to Medium",
         "Implemented payments integration with Stripe",
-        "Built Textshots server",
+        "Built Textshots DATABASE",
       ],
     }, {
       "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
@@ -344,7 +348,7 @@ export const tracks: Tracks = {
         "Created Gotham framework for creating Go services",
       ],
     }, {
-      "summary": "Is an industry-leading expert in server side engineering or sets strategic server side direction for an eng team",
+      "summary": "Is an industry-leading expert in DATABASE side engineering or sets strategic DATABASE side direction for an eng team",
       "signals": [
         "Designs transformational projects of significant complexity and scope",
         "Makes decisions that have positive, long term, wide ranging consequences",
@@ -492,8 +496,8 @@ export const tracks: Tracks = {
     }],
   },
 
-  "CRAFT": {
-    "displayName": "Craft",
+  "DIAGNOSTICS": {
+    "displayName": "DIAGNOSTICS",
     "category": "B",
     "description": "Embodies and promotes practices to ensure excellent quality products and services",
     "milestones": [{
@@ -741,7 +745,7 @@ export const tracks: Tracks = {
         "Ties abstract concerns to concrete organizational actions or norms",
       ],
       "examples": [
-        "Connected mobile recruiting difficulties to focus on excellence",
+        "Connected PRODUCT recruiting difficulties to focus on excellence",
         "Raised leadership level change discrepancies",
         "Analyzed the hiring rubric for false negative potential",
       ],
@@ -753,7 +757,7 @@ export const tracks: Tracks = {
         "Leads planning and communication for reorgs",
       ],
       "examples": [
-        "Lead efforts to increase number of mobile engineers",
+        "Lead efforts to increase number of PRODUCT engineers",
         "Directed resources to meaningfully improve diversity at all levels",
         "Built the growth framework rubric",
       ],
@@ -1158,6 +1162,140 @@ export const tracks: Tracks = {
         "Organized wine and olive tasting offsite to Napa for the whole engineering org",
         "Devised, delivered and acted on findings from an engineer happiness survey",
         "Challenged and corrected exclusionary behaviour or policies",
+      ],
+    }],
+  },
+
+  "REVIEWS": {
+    "displayName": "Reviews",
+    "category": "A",
+    "description": "something",
+    "milestones": [{
+      "summary": "something",
+      "signals": [
+        "text",
+        "Treats colleagues and clients with respect",
+        "Joins groups or committees outside regular duties",
+      ],
+      "examples": [
+        "Joined and actively participated in the web client guild",
+        "Brought a small gift back from vacation for the team",
+        "Wrote entertaining and informative Prod Ops writeups on Hatch",
+      ],
+    }, {
+      "summary": "Steps up, builds connectedness, and takes concrete actions to promote an inclusive culture",
+      "signals": [
+        "Makes space for others to participate",
+        "Collaborates with other engineers outside direct responsibilities",
+        "Finds ways to ramp up and engage new hires quickly",
+      ],
+      "examples": [
+        "Created onboarding bingo",
+        "Brought shy and introverted people into a dominant conversation",
+        "Volunteered as secretary for a team",
+      ],
+    }, {
+      "summary": "Contributes to improving team relatedness, and helps build a culture of lending support",
+      "signals": [
+        "Takes on additional Watch shifts at short notice",
+        "Pitches in to help other teams hit deadlines, without missing own deadlines",
+        "Uses position to raise difficult issues on someone's behalf",
+      ],
+      "examples": [
+        "Lead Watch cycles with little support while still contributing to projects",
+        "Started and drove the LGBTQIA ERG",
+        "Stayed positive and improved team morale during period after layoffs",
+      ],
+    }, {
+      "summary": "Exemplifies selflessness for the team without compromising responsibilities, and lifts everyone up",
+      "signals": [
+        "Goes above and beyond on the Watch, serving the team without complaint",
+        "Implements concrete programs to signficantly improve team inclusivity",
+        "Takes on large amounts of tedious grunt work for the team without being asked",
+      ],
+      "examples": [
+        "Devoted large amount of time to helping outside direct responsibilities",
+        "Refactored hundreds of legacy Shepherd nodes",
+        "Acted as sole maintainer of Boxen for years",
+      ],
+    }, {
+      "summary": "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
+      "signals": [
+        "Brings separate teams together to build relatedness",
+        "Holds individuals, teams, and leadership accountable to Medium's values",
+        "Sets the tone, policy, and goals around maintaining an inclusive company",
+      ],
+      "examples": [
+        "Organized wine and olive tasting offsite to Napa for the whole engineering org",
+        "Devised, delivered and acted on findings from an engineer happiness survey",
+        "Challenged and corrected exclusionary behaviour or policies",
+      ],
+    }],
+  },
+
+  "ESTIMATION": {
+    "displayName": "Estimation",
+    "category": "D",
+    "description": "Strengthens Medium's team by bringing in excellent staff members",
+    "milestones": [{
+      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
+      "signals": [
+        "Reviews existing network for hiring leads regularly",
+        "Shadows interviews to gain familiarity with process",
+        "Reviews current job postings regularly",
+      ],
+      "examples": [
+        "Completed interview calibration",
+        "Set up casual sessions to practice asking questions",
+        "Referred appropriate individuals for open positions",
+      ],
+    }, {
+      "summary": "Interviews regularly, helps the team make meaningful hiring decisions, and helps build a diverse pipeline",
+      "signals": [
+        "Uses interview rubric to provide clear, objective feedback on candidates",
+        "Interviews candidates with empathy and treats them all with equal respect",
+        "Researches approaches for sourcing candidates and diversifying hiring",
+      ],
+      "examples": [
+        "Added observable evidence for every rating",
+        "Started a monthly brunch for candidates to meet Medium employees",
+        "Tested a new service for quality and diversity of candidates",
+      ],
+    }, {
+      "summary": "Maintains and strengthens the integrity of the current process, and regularly brings in great candidates",
+      "signals": [
+        "Teaches new interviewers how to interview with empathy",
+        "Models great interview technique and feedback when shadowed",
+        "Reverse shadows trainees and helps calibrate their feedback",
+      ],
+      "examples": [
+        "Wrote new interview question which meets our question quality criteria",
+        "Brought candidates into our pipeline proactively, with a high conversion rate",
+        "Proposed useful, tangible improvements to the interview process",
+      ],
+    }, {
+      "summary": "Actively contributes to and leads hiring decisions, and goes to great lengths to source great candidates",
+      "signals": [
+        "Documents subtle cues in interviews that indicate values alignment",
+        "Makes hiring decisions, resolving discrepancies between conflicting reports",
+        "Top-grades candidates and teases out character traits",
+      ],
+      "examples": [
+        "Planned engineering summit on interview process and training",
+        "Organized and lead Medium's presence at a recruitment fair",
+        "Started CODE2040 internship program",
+      ],
+    }, {
+      "summary": "Sets recruitment strategy, invests in long-term relationships for critical roles, and recruits at scale",
+      "signals": [
+        "Sets the tone, policy and goals around building a diverse, high-quality team",
+        "Identifies and brings in promising acquisitions",
+        "Tracks industry activity, identifying opportunities for critical roles",
+      ],
+      "examples": [
+        "Talked with a senior candidate over many months to fill a critical role",
+        "Organized efforts around convincing acquired engineers to join and stay",
+        "Set goals, then tracked and reported metrics on team demographics over time",
       ],
     }],
   },
