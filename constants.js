@@ -4,7 +4,8 @@ import * as d3 from 'd3'
 export type TrackId = 'PRODUCT' | 'TOOLS' | 'FOUNDATIONS' | 'DATABASE' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'DIAGNOSTICS' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'SCALING' | 'WELLBEING' | 'ACCOMPLISHMENT' |
-  'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'| 'REVIEWS'| 'ESTIMATION'|'BUILD_TOGETHER'|
+  'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY' | 'REVIEWS' | 'ESTIMATION' | 'BUILD_TOGETHER'
+
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
@@ -92,12 +93,12 @@ type Tracks = {|
   'COMMUNITY': Track,
   'REVIEWS': Track,
   'ESTIMATION':Track,
-  'BUILD_TOGETHER':Track,
+  'BUILD_TOGETHER':Track
 |}
 
 export const tracks: Tracks = {
   "PRODUCT": {
-    "displayName": "PRODUCT",
+    "displayName": "Product",
     "category": "A",
     "description": "Develops expertise in MongoDB products across platforms (Linux, Windows, Mobile, etc)",
     "milestones": [{
@@ -162,9 +163,8 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "TOOLS": {
-    "displayName": "TOOLS",
+    "displayName": "Tools",
     "category": "A",
     "description": "Develops expertise in TOOLS product technologies, such as Go, Java, and JavaScript",
     "milestones": [{
@@ -229,7 +229,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "FOUNDATIONS": {
     "displayName": "Foundations",
     "category": "A",
@@ -296,7 +295,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "DATABASE": {
     "displayName": "DATABASE",
     "category": "A",
@@ -363,7 +361,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "PROJECT_MANAGEMENT": {
     "displayName": "Project management",
     "category": "B",
@@ -430,7 +427,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "COMMUNICATION": {
     "displayName": "Communication",
     "category": "B",
@@ -497,7 +493,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "DIAGNOSTICS": {
     "displayName": "DIAGNOSTICS",
     "category": "A",
@@ -564,7 +559,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "INITIATIVE": {
     "displayName": "Initiative",
     "category": "B",
@@ -631,7 +625,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "CAREER_DEVELOPMENT": {
     "displayName": "Career development",
     "category": "B",
@@ -698,7 +691,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "SCALING": {
     "displayName": "Scaling",
     "category": "B",
@@ -765,7 +757,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "WELLBEING": {
     "displayName": "Wellbeing",
     "category": "B",
@@ -832,7 +823,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "ACCOMPLISHMENT": {
     "displayName": "Accomplishment",
     "category": "B",
@@ -899,7 +889,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "MENTORSHIP": {
     "displayName": "Mentorship",
     "category": "D",
@@ -966,7 +955,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "EVANGELISM": {
     "displayName": "Evangelism",
     "category": "D",
@@ -1033,7 +1021,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "RECRUITING": {
     "displayName": "Recruiting",
     "category": "D",
@@ -1100,7 +1087,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "COMMUNITY": {
     "displayName": "Community",
     "category": "D",
@@ -1167,7 +1153,6 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "REVIEWS": {
     "displayName": "Reviews",
     "category": "A",
@@ -1234,74 +1219,72 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
-    "BUILD_TOGETHER": {
-      "displayName": "Build Together",
-      "category": "C",
-      "description": "Exemplifies our company value of #buildtogether",
-      "milestones": [{
-        "summary": "something",
-        "signals": [
-          "text",
-          "Treats colleagues and clients with respect",
-          "Joins groups or committees outside regular duties",
-        ],
-        "examples": [
-          "Joined and actively participated in the web client guild",
-          "Brought a small gift back from vacation for the team",
-          "Wrote entertaining and informative Prod Ops writeups on Hatch",
-        ],
-      }, {
-        "summary": "Steps up, builds connectedness, and takes concrete actions to promote an inclusive culture",
-        "signals": [
-          "Makes space for others to participate",
-          "Collaborates with other engineers outside direct responsibilities",
-          "Finds ways to ramp up and engage new hires quickly",
-        ],
-        "examples": [
-          "Created onboarding bingo",
-          "Brought shy and introverted people into a dominant conversation",
-          "Volunteered as secretary for a team",
-        ],
-      }, {
-        "summary": "Contributes to improving team relatedness, and helps build a culture of lending support",
-        "signals": [
-          "Takes on additional Watch shifts at short notice",
-          "Pitches in to help other teams hit deadlines, without missing own deadlines",
-          "Uses position to raise difficult issues on someone's behalf",
-        ],
-        "examples": [
-          "Lead Watch cycles with little support while still contributing to projects",
-          "Started and drove the LGBTQIA ERG",
-          "Stayed positive and improved team morale during period after layoffs",
-        ],
-      }, {
-        "summary": "Exemplifies selflessness for the team without compromising responsibilities, and lifts everyone up",
-        "signals": [
-          "Goes above and beyond on the Watch, serving the team without complaint",
-          "Implements concrete programs to signficantly improve team inclusivity",
-          "Takes on large amounts of tedious grunt work for the team without being asked",
-        ],
-        "examples": [
-          "Devoted large amount of time to helping outside direct responsibilities",
-          "Refactored hundreds of legacy Shepherd nodes",
-          "Acted as sole maintainer of Boxen for years",
-        ],
-      }, {
-        "summary": "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
-        "signals": [
-          "Brings separate teams together to build relatedness",
-          "Holds individuals, teams, and leadership accountable to MongoDB's values",
-          "Sets the tone, policy, and goals around maintaining an inclusive company",
-        ],
-        "examples": [
-          "Organized wine and olive tasting offsite to Napa for the whole engineering org",
-          "Devised, delivered and acted on findings from an engineer happiness survey",
-          "Challenged and corrected exclusionary behaviour or policies",
-        ],
-      }],
-    },
-
+  "BUILD_TOGETHER": {
+    "displayName": "Build Together",
+    "category": "C",
+    "description": "Exemplifies our company value of #buildtogether",
+    "milestones": [{
+      "summary": "something",
+      "signals": [
+        "text",
+        "Treats colleagues and clients with respect",
+        "Joins groups or committees outside regular duties",
+      ],
+      "examples": [
+        "Joined and actively participated in the web client guild",
+        "Brought a small gift back from vacation for the team",
+        "Wrote entertaining and informative Prod Ops writeups on Hatch",
+      ],
+    }, {
+      "summary": "Steps up, builds connectedness, and takes concrete actions to promote an inclusive culture",
+      "signals": [
+        "Makes space for others to participate",
+        "Collaborates with other engineers outside direct responsibilities",
+        "Finds ways to ramp up and engage new hires quickly",
+      ],
+      "examples": [
+        "Created onboarding bingo",
+        "Brought shy and introverted people into a dominant conversation",
+        "Volunteered as secretary for a team",
+      ],
+    }, {
+      "summary": "Contributes to improving team relatedness, and helps build a culture of lending support",
+      "signals": [
+        "Takes on additional Watch shifts at short notice",
+        "Pitches in to help other teams hit deadlines, without missing own deadlines",
+        "Uses position to raise difficult issues on someone's behalf",
+      ],
+      "examples": [
+        "Lead Watch cycles with little support while still contributing to projects",
+        "Started and drove the LGBTQIA ERG",
+        "Stayed positive and improved team morale during period after layoffs",
+      ],
+    }, {
+      "summary": "Exemplifies selflessness for the team without compromising responsibilities, and lifts everyone up",
+      "signals": [
+        "Goes above and beyond on the Watch, serving the team without complaint",
+        "Implements concrete programs to signficantly improve team inclusivity",
+        "Takes on large amounts of tedious grunt work for the team without being asked",
+      ],
+      "examples": [
+        "Devoted large amount of time to helping outside direct responsibilities",
+        "Refactored hundreds of legacy Shepherd nodes",
+        "Acted as sole maintainer of Boxen for years",
+      ],
+    }, {
+      "summary": "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
+      "signals": [
+        "Brings separate teams together to build relatedness",
+        "Holds individuals, teams, and leadership accountable to MongoDB's values",
+        "Sets the tone, policy, and goals around maintaining an inclusive company",
+      ],
+      "examples": [
+        "Organized wine and olive tasting offsite to Napa for the whole engineering org",
+        "Devised, delivered and acted on findings from an engineer happiness survey",
+        "Challenged and corrected exclusionary behaviour or policies",
+      ],
+    }],
+  },
   "ESTIMATION": {
     "displayName": "Estimation",
     "category": "D",
@@ -1368,6 +1351,77 @@ export const tracks: Tracks = {
       ],
     }],
   },
+
+
+
+
+  // it's weird, but this extra entry is required to make it all work.
+  "MOBILE": {
+    "displayName": "Mobile",
+    "category": "A",
+    "description": "Develops expertise in native mobile platform engineering, such as iOS or Android",
+    "milestones": [{
+      "summary": "Works effectively within established iOS or Android architectures, following current best practices",
+      "signals": [
+        "Delivers features requiring simple local modifications",
+        "Adds simple actions that call server endpoints",
+        "Reuses existing components appropriately",
+      ],
+      "examples": [
+        "Added existing button to a different iOS surface",
+        "Add follow button for publications on Android",
+        "Fetched and displayed a new stream, using existing stream item styles",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Defines new useful and appropriate proto-generated objects",
+        "Creates simple new activities on Android",
+        "Migrates code from old patterns to new patterns",
+      ],
+      "examples": [
+        "Upgraded SDWebImage to a new major version",
+        "Added support for rendering a new type of stream item",
+        "Prototyped a simple new feature quickly",
+      ],
+    }, {
+      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "signals": [
+        "Implements complex features with a large product surface area",
+        "Works effectively with  Android reactive programming framework",
+        "Adds support for new iOS features after a major iOS version upgrade",
+      ],
+      "examples": [
+        "Designed iOS caching strategy for offline reading",
+        "Built series reader on Android",
+        "Informed the team about recent best practice changes and deprecations",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+      "signals": [
+        "Pioneers architecture migration strategies that reduce programmer burden",
+        "Fixes subtle memory management issues",
+        "Implements interactive dismissals that bring delight",
+      ],
+      "examples": [
+        "Upgraded CocoaPods to a new major version",
+        "Designed architecture for fetching and rendering stream items",
+        "Migrated Android persistance layer to reactive programming",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+      "signals": [
+        "Defines long-term goals and ensures active projects are in service of them",
+        "Designs and builds innovative, industry-leading UI interactions",
+        "Invents new techniques to responsibly stretch limits of the Android platform",
+      ],
+      "examples": [
+        "Defined and drove complete migration plan to Swift or Kotlin",
+        "Implemented Android recycler views before platform support existed",
+        "Pioneered application-level abstractions for multi-app environment",
+      ],
+    }],
+  }
 }
 
 export const trackIds: TrackId[] = Object.keys(tracks)
