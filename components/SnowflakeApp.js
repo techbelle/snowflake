@@ -156,9 +156,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
         `}</style>
         <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://mongodb.com/" target="_blank">
-            <MongoDB />
-          </a>
+          <a href="https://mongodb.com/" target="_blank">MongoDB</a>
         </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
