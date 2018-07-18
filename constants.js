@@ -3,8 +3,8 @@ import * as d3 from 'd3'
 
 export type TrackId = 'PRODUCT' | 'TOOLS' | 'FOUNDATIONS' | 'DATABASE' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'DIAGNOSTICS' | 'INITIATIVE' |
-  'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
-  'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'| 'REVIEWS'| 'ESTIMATION'|
+  'CAREER_DEVELOPMENT' | 'SCALING' | 'WELLBEING' | 'ACCOMPLISHMENT' |
+  'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'| 'REVIEWS'| 'ESTIMATION'|'BUILD_TOGETHER'|
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
@@ -17,7 +17,7 @@ export type MilestoneMap = {
   'DIAGNOSTICS': Milestone,
   'INITIATIVE': Milestone,
   'CAREER_DEVELOPMENT': Milestone,
-  'ORG_DESIGN': Milestone,
+  'SCALING': Milestone,
   'WELLBEING': Milestone,
   'ACCOMPLISHMENT': Milestone,
   'MENTORSHIP': Milestone,
@@ -26,6 +26,7 @@ export type MilestoneMap = {
   'COMMUNITY': Milestone,
   'REVIEWS': Milestone,
   'ESTIMATION': Milestone,
+  'BUILD_TOGETHER': Milestone
 }
 export const milestones = [0, 1, 2, 3, 4, 5]
 
@@ -82,7 +83,7 @@ type Tracks = {|
   'DIAGNOSTICS': Track,
   'INITIATIVE': Track,
   'CAREER_DEVELOPMENT': Track,
-  'ORG_DESIGN': Track,
+  'SCALING': Track,
   'WELLBEING': Track,
   'ACCOMPLISHMENT': Track,
   'MENTORSHIP': Track,
@@ -91,18 +92,19 @@ type Tracks = {|
   'COMMUNITY': Track,
   'REVIEWS': Track,
   'ESTIMATION':Track,
+  'BUILD_TOGETHER':Track,
 |}
 
 export const tracks: Tracks = {
   "PRODUCT": {
     "displayName": "PRODUCT",
     "category": "A",
-    "description": "Develops expertise in native PRODUCT platform engineering, such as iOS or Android",
+    "description": "Develops expertise in MongoDB products across platforms (Linux, Windows, Mobile, etc)",
     "milestones": [{
-      "summary": "Works effectively within established iOS or Android architectures, following current best practices",
+      "summary": "Works effectively with MongoDB products, following current best practices",
       "signals": [
-        "Delivers features requiring simple local modifications",
-        "Adds simple actions that call DATABASE endpoints",
+        "Delivers features requiring simple modifications",
+        "Adds to documentation",
         "Reuses existing components appropriately",
       ],
       "examples": [
@@ -147,7 +149,7 @@ export const tracks: Tracks = {
         "Migrated Android persistance layer to reactive programming",
       ],
     }, {
-      "summary": "Is an industry-leading expert in PRODUCT engineering or sets strategic PRODUCT direction for an eng team",
+      "summary": "Is an industry-leading expert in MongoDB products or sets strategic PRODUCT direction for an eng team",
       "signals": [
         "Defines long-term goals and ensures active projects are in service of them",
         "Designs and builds innovative, industry-leading UI interactions",
@@ -197,8 +199,8 @@ export const tracks: Tracks = {
         "Acts a caretaker for all of web client code",
       ],
       "examples": [
-        "Designed font loading strategy for Medium",
-        "Researched utility of service workers for Medium",
+        "Designed font loading strategy for MongoDB",
+        "Researched utility of service workers for MongoDB",
         "Designed and implemented ResponseScreen",
       ],
     }, {
@@ -209,8 +211,8 @@ export const tracks: Tracks = {
         "Makes architectural decisions that eliminate entire classes of bugs",
       ],
       "examples": [
-        "Designed Medium's post morpher and delta system",
-        "Implemented Medium's scrolling text over image blur",
+        "Designed MongoDB's post morpher and delta system",
+        "Implemented MongoDB's scrolling text over image blur",
         "Designed and pioneered proto-based model storage",
       ],
     }, {
@@ -265,7 +267,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Designed Ansible configuration management",
-        "Built Medium's realtime stats pipeline",
+        "Built MongoDB's realtime stats pipeline",
         "Designed flexible framework for writing machine learning jobs",
       ],
     }, {
@@ -289,7 +291,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Invented a novel ML technique that advanced the state of the art",
-        "Defined and developed Medium's continuous delivery strategy",
+        "Defined and developed MongoDB's continuous delivery strategy",
         "Developed and implemented HA strategy",
       ],
     }],
@@ -307,7 +309,7 @@ export const tracks: Tracks = {
         "Makes minor DATABASE changes to support client needs",
       ],
       "examples": [
-        "Added IFTTT trigger for new bookmark to medium2",
+        "Added IFTTT trigger for new bookmark to MongoDB2",
         "Added delete audio route to Buggle",
         "Queried a Dynamo LSI appropriately",
       ],
@@ -331,7 +333,7 @@ export const tracks: Tracks = {
         "Writes playbooks for new service maintenance",
       ],
       "examples": [
-        "Implemented Google Auth login to Medium",
+        "Implemented Google Auth login to MongoDB",
         "Implemented payments integration with Stripe",
         "Built Textshots DATABASE",
       ],
@@ -343,7 +345,7 @@ export const tracks: Tracks = {
         "Makes appropriate buy vs build choices",
       ],
       "examples": [
-        "Designed Medium's ranked feed architecture",
+        "Designed MongoDB's ranked feed architecture",
         "Designed custom domains architecture",
         "Created Gotham framework for creating Go services",
       ],
@@ -355,8 +357,8 @@ export const tracks: Tracks = {
         "Identifies and solves systemic problems with current architecture",
       ],
       "examples": [
-        "Researched, vetted, and selected Go as Medium's statically typed language",
-        "Defined microservices architecture and medium2 migration plan",
+        "Researched, vetted, and selected Go as MongoDB's statically typed language",
+        "Defined microservices architecture and MongoDB2 migration plan",
         "Defined and implemented proprietary IP core to the company's success",
       ],
     }],
@@ -478,7 +480,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Lead off-site workshop on interviewing",
-        "Wrote Medium's growth framework and rationale",
+        "Wrote MongoDB's growth framework and rationale",
         "Aligned the entire organization around claps",
       ],
     }, {
@@ -498,7 +500,7 @@ export const tracks: Tracks = {
 
   "DIAGNOSTICS": {
     "displayName": "DIAGNOSTICS",
-    "category": "B",
+    "category": "A",
     "description": "Embodies and promotes practices to ensure excellent quality products and services",
     "milestones": [{
       "summary": "Delivers consistently good quality work",
@@ -545,7 +547,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Added code coverage reporting to iOS CI pipeline",
-        "Iterated repeatedly to develop Medium's underlines solution",
+        "Iterated repeatedly to develop MongoDB's underlines solution",
         "Defined and oversaw plan for closing Heartbleed vulnerability",
       ],
     }, {
@@ -613,7 +615,7 @@ export const tracks: Tracks = {
       "examples": [
         "Created the interviewing rubric and booklet",
         "Implemented and secured support for native login",
-        "Migrated medium2 to mono repo and bazel",
+        "Migrated MongoDB2 to mono repo and bazel",
       ],
     }, {
       "summary": "Effects change that has a substantial positive impact on the whole company",
@@ -624,15 +626,15 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Migrated the organization from Holacracy",
-        "Built Medium Android prototype and convinced execs to fund it",
-        "Convinced leadership and engineering org to move to Medium Lite architecture",
+        "Built MongoDB Android prototype and convinced execs to fund it",
+        "Convinced leadership and engineering org to move to MongoDB Lite architecture",
       ],
     }],
   },
 
   "CAREER_DEVELOPMENT": {
     "displayName": "Career development",
-    "category": "C",
+    "category": "B",
     "description": "Provides strategic support to engineers to help them build the career they want",
     "milestones": [{
       "summary": "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
@@ -697,9 +699,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "ORG_DESIGN": {
-    "displayName": "Org design",
-    "category": "C",
+  "SCALING": {
+    "displayName": "Scaling",
+    "category": "B",
     "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
     "milestones": [{
       "summary": "Respects and participates in processes, giving meaningful feedback to help the organization improve",
@@ -766,7 +768,7 @@ export const tracks: Tracks = {
 
   "WELLBEING": {
     "displayName": "Wellbeing",
-    "category": "C",
+    "category": "B",
     "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
     "milestones": [{
       "summary": "Uses tools and processes to help ensure colleagues are healthy and happy",
@@ -833,7 +835,7 @@ export const tracks: Tracks = {
 
   "ACCOMPLISHMENT": {
     "displayName": "Accomplishment",
-    "category": "C",
+    "category": "B",
     "description": "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
     "milestones": [{
       "summary": "Helps individuals identify blockers and helps them identify next steps for resolution",
@@ -927,7 +929,7 @@ export const tracks: Tracks = {
         "Lead from behind to support someone new to a leadership role",
       ],
     }, {
-      "summary": "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
+      "summary": "Teaches small groups of engineers and contributes to MongoDB's shared knowledge base",
       "signals": [
         "Avoids siloing information when it can be usefully shared with others",
         "Works to increase the bus factor of systems",
@@ -936,7 +938,7 @@ export const tracks: Tracks = {
       "examples": [
         "Gave a brown bag presentation on payments",
         "Wrote Hatch post on avoiding RDS backfill issues",
-        "Wrote Medium-U content module",
+        "Wrote MongoDB-U content module",
       ],
     }, {
       "summary": "Encourages people to mentor each other, and creates ways for them to do so",
@@ -946,7 +948,7 @@ export const tracks: Tracks = {
         "Creates brown bag series and lines up speakers",
       ],
       "examples": [
-        "Created and lead Medium's Women in Eng group",
+        "Created and lead MongoDB's Women in Eng group",
         "Organized an Eng All Hands with an outside speaker",
         "Designed and taught web client guild curriculum",
       ],
@@ -968,66 +970,66 @@ export const tracks: Tracks = {
   "EVANGELISM": {
     "displayName": "Evangelism",
     "category": "D",
-    "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
+    "description": "Promotes MongoDB to the outside world and establishes it as an attractive and thoughtful place to work",
     "milestones": [{
-      "summary": "Represents Medium well externally, and influences individuals positively",
+      "summary": "Represents MongoDB well externally, and influences individuals positively",
       "signals": [
         "Shares personal and organizational successes with their network",
-        "Attends Medium-hosted events and talks with guests",
+        "Attends MongoDB-hosted events and talks with guests",
         "Communicates genuine and honest excitement about their work externally",
       ],
       "examples": [
-        "Shared a Medium product launch post on Facebook",
+        "Shared a MongoDB product launch post on Facebook",
         "Acted as a guide for a non-friend visitor to the office",
         "Supported PR efforts by giving a quote or having a photo taken",
       ],
     }, {
       "summary": "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
       "signals": [
-        "Takes meaningful action to introduce people to Medium",
-        "Joined public Slack group and represented Medium appropriately, and well",
-        "Organizes positive small- or medium-sized events that bring people to Medium",
+        "Takes meaningful action to introduce people to MongoDB",
+        "Joined public Slack group and represented MongoDB appropriately, and well",
+        "Organizes positive small- or MongoDB-sized events that bring people to MongoDB",
       ],
       "examples": [
         "Volunteered as a helper for CODE2040 writing workshop",
         "Organized a short tour of the office by college students",
-        "Talked at a Women Who Code event hosted at Medium",
+        "Talked at a Women Who Code event hosted at MongoDB",
       ],
     }, {
-      "summary": "Works hard to positively influence large groups of people on their views of Medium",
+      "summary": "Works hard to positively influence large groups of people on their views of MongoDB",
       "signals": [
         "Mentors or participates in a high visibility way in an external organization",
         "Builds fruitful partnerships with external organizations",
-        "Writes blog posts about Medium that receive moderate traffic",
+        "Writes blog posts about MongoDB that receive moderate traffic",
       ],
       "examples": [
-        "Represented Medium on a panel at a conference of industry experts",
+        "Represented MongoDB on a panel at a conference of industry experts",
         "Established close ties with Creative Commons",
         "Built a durable, long-standing relationship with Code2040",
       ],
     }, {
-      "summary": "Establishes Medium as an great, innovative company and workplace to the whole industry",
+      "summary": "Establishes MongoDB as an great, innovative company and workplace to the whole industry",
       "signals": [
         "Establishes themself as an industry thought leader who attracts talent",
-        "Publishes material about Medium's organizational or technical innovations",
-        "Leverages significant following to evangelise Medium",
+        "Publishes material about MongoDB's organizational or technical innovations",
+        "Leverages significant following to evangelise MongoDB",
       ],
       "examples": [
-        "Published a paper on Medium technology in a peer-reviewed journal",
+        "Published a paper on MongoDB technology in a peer-reviewed journal",
         "Authored joint-press release with EFF on DNT",
-        "Published “Why Content Editable Is Terrible” on the Medium engineering blog",
+        "Published “Why Content Editable Is Terrible” on the MongoDB engineering blog",
       ],
     }, {
-      "summary": "Introduces Medium in a positive light to a wider audience outside the industry",
+      "summary": "Introduces MongoDB in a positive light to a wider audience outside the industry",
       "signals": [
         "Delivers key messages to broad, mainstream audiences",
-        "Influences people with large audiences to talk about Medium positively",
-        "Drives recognition and adoption of Medium in significant numbers",
+        "Influences people with large audiences to talk about MongoDB positively",
+        "Drives recognition and adoption of MongoDB in significant numbers",
       ],
       "examples": [
         "Published or interviewed in a mainstream newspaper or website outside tech",
         "Keynoted a conference with international attention",
-        "Represented Medium in national televised media",
+        "Represented MongoDB in national televised media",
       ],
     }],
   },
@@ -1035,9 +1037,9 @@ export const tracks: Tracks = {
   "RECRUITING": {
     "displayName": "Recruiting",
     "category": "D",
-    "description": "Strengthens Medium's team by bringing in excellent staff members",
+    "description": "Strengthens MongoDB's team by bringing in excellent staff members",
     "milestones": [{
-      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
+      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at MongoDB",
       "signals": [
         "Reviews existing network for hiring leads regularly",
         "Shadows interviews to gain familiarity with process",
@@ -1057,7 +1059,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Added observable evidence for every rating",
-        "Started a monthly brunch for candidates to meet Medium employees",
+        "Started a monthly brunch for candidates to meet MongoDB employees",
         "Tested a new service for quality and diversity of candidates",
       ],
     }, {
@@ -1081,7 +1083,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Planned engineering summit on interview process and training",
-        "Organized and lead Medium's presence at a recruitment fair",
+        "Organized and lead MongoDB's presence at a recruitment fair",
         "Started CODE2040 internship program",
       ],
     }, {
@@ -1155,7 +1157,7 @@ export const tracks: Tracks = {
       "summary": "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
       "signals": [
         "Brings separate teams together to build relatedness",
-        "Holds individuals, teams, and leadership accountable to Medium's values",
+        "Holds individuals, teams, and leadership accountable to MongoDB's values",
         "Sets the tone, policy, and goals around maintaining an inclusive company",
       ],
       "examples": [
@@ -1222,7 +1224,7 @@ export const tracks: Tracks = {
       "summary": "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
       "signals": [
         "Brings separate teams together to build relatedness",
-        "Holds individuals, teams, and leadership accountable to Medium's values",
+        "Holds individuals, teams, and leadership accountable to MongoDB's values",
         "Sets the tone, policy, and goals around maintaining an inclusive company",
       ],
       "examples": [
@@ -1233,12 +1235,79 @@ export const tracks: Tracks = {
     }],
   },
 
+    "BUILD_TOGETHER": {
+      "displayName": "Build Together",
+      "category": "C",
+      "description": "Exemplifies our company value of #buildtogether",
+      "milestones": [{
+        "summary": "something",
+        "signals": [
+          "text",
+          "Treats colleagues and clients with respect",
+          "Joins groups or committees outside regular duties",
+        ],
+        "examples": [
+          "Joined and actively participated in the web client guild",
+          "Brought a small gift back from vacation for the team",
+          "Wrote entertaining and informative Prod Ops writeups on Hatch",
+        ],
+      }, {
+        "summary": "Steps up, builds connectedness, and takes concrete actions to promote an inclusive culture",
+        "signals": [
+          "Makes space for others to participate",
+          "Collaborates with other engineers outside direct responsibilities",
+          "Finds ways to ramp up and engage new hires quickly",
+        ],
+        "examples": [
+          "Created onboarding bingo",
+          "Brought shy and introverted people into a dominant conversation",
+          "Volunteered as secretary for a team",
+        ],
+      }, {
+        "summary": "Contributes to improving team relatedness, and helps build a culture of lending support",
+        "signals": [
+          "Takes on additional Watch shifts at short notice",
+          "Pitches in to help other teams hit deadlines, without missing own deadlines",
+          "Uses position to raise difficult issues on someone's behalf",
+        ],
+        "examples": [
+          "Lead Watch cycles with little support while still contributing to projects",
+          "Started and drove the LGBTQIA ERG",
+          "Stayed positive and improved team morale during period after layoffs",
+        ],
+      }, {
+        "summary": "Exemplifies selflessness for the team without compromising responsibilities, and lifts everyone up",
+        "signals": [
+          "Goes above and beyond on the Watch, serving the team without complaint",
+          "Implements concrete programs to signficantly improve team inclusivity",
+          "Takes on large amounts of tedious grunt work for the team without being asked",
+        ],
+        "examples": [
+          "Devoted large amount of time to helping outside direct responsibilities",
+          "Refactored hundreds of legacy Shepherd nodes",
+          "Acted as sole maintainer of Boxen for years",
+        ],
+      }, {
+        "summary": "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
+        "signals": [
+          "Brings separate teams together to build relatedness",
+          "Holds individuals, teams, and leadership accountable to MongoDB's values",
+          "Sets the tone, policy, and goals around maintaining an inclusive company",
+        ],
+        "examples": [
+          "Organized wine and olive tasting offsite to Napa for the whole engineering org",
+          "Devised, delivered and acted on findings from an engineer happiness survey",
+          "Challenged and corrected exclusionary behaviour or policies",
+        ],
+      }],
+    },
+
   "ESTIMATION": {
     "displayName": "Estimation",
     "category": "D",
-    "description": "Strengthens Medium's team by bringing in excellent staff members",
+    "description": "Strengthens MongoDB's team by bringing in excellent staff members",
     "milestones": [{
-      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
+      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at MongoDB",
       "signals": [
         "Reviews existing network for hiring leads regularly",
         "Shadows interviews to gain familiarity with process",
@@ -1258,7 +1327,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Added observable evidence for every rating",
-        "Started a monthly brunch for candidates to meet Medium employees",
+        "Started a monthly brunch for candidates to meet MongoDB employees",
         "Tested a new service for quality and diversity of candidates",
       ],
     }, {
@@ -1282,7 +1351,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Planned engineering summit on interview process and training",
-        "Organized and lead Medium's presence at a recruitment fair",
+        "Organized and lead MongoDB's presence at a recruitment fair",
         "Started CODE2040 internship program",
       ],
     }, {
@@ -1328,7 +1397,7 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
-  .range(['#93C572', '#77DD78', '#03C03C', '#138808'])
+  .range(['#93C572', '#77DD78', '#13aa52', '#138808'])
 
 export const titles = [
   {label: 'SE2', minPoints: 0, maxPoints: 16},
