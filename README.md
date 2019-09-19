@@ -4,6 +4,8 @@ Snowflake is Medium's tool for planning and supporting engineers' career develop
 about how we use this tool in our [growth framework documentation](https://medium.com/s/engineering-growth-framework).
 Their growth tool is hosted [publicly](https://snowflake.medium.com).
 
+Since they open-sourced this tool, I've been tinkering with it for use with my own engineering teams, instead of a spreadsheet.
+
 
 ## Installation
 
