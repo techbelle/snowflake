@@ -31,3 +31,5 @@ This will put a static version of the site in `out/`.
 
 * Load initial data from a file, to improve flexibility.
 * Add restricted job title selection and validation.
+* Save to Atlas Database (that is secure) per employee
+* Add date/timestamp of entry to show progress
